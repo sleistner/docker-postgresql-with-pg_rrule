@@ -1,5 +1,6 @@
 # Table of Contents
 
+- [Preliminaries](#preliminaries)
 - [Introduction](#introduction)
 - [Changelog](Changelog.md)
 - [Contributing](#contributing)
@@ -12,6 +13,25 @@
     - [Securing the server](#securing-the-server)
 - [Shell Access](#shell-access)
 - [Upgrading](#upgrading)
+
+# Preliminaries
+
+This is forked version of [sameersbn/docker-postgresql](https://github.com/sameersbn/docker-postgresql) with added [pg_rrule plugin](https://github.com/petropavel13/pg_rrule). 
+
+To build just run the following.
+
+```bash
+docker build -t postgres_rrule github.com/Coffei/docker-postgresql-with-pg_rrule.git
+```
+
+Note that you also have to install the extension for every database you want to use it in.
+
+```SQL
+CREATE EXTENSION pg_rrule;
+```
+
+Below you will find the original README file. Enjoy!
+
 
 # Introduction
 
