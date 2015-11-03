@@ -20,7 +20,7 @@ RUN mkdir /tmp/pg_rrule \
  && make \
  && cp libpg_rrule.so /usr/lib/postgresql/${PG_VERSION}/lib/pg_rrule.so \
  && cp ../pg_rrule.control /usr/share/postgresql/${PG_VERSION}/extension \
- && cp ../sql/pg_rrule.sql /usr/share/postgresql/9.4/extension/pg_rrule--0.2.0.sql
+ && cp ../sql/pg_rrule.sql.in /usr/share/postgresql/9.4/extension/pg_rrule--0.2.0.sql
 
 ADD start /start
 RUN chmod 755 /start
